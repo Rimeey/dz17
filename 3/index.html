@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>test</title>
+</head>
+<body>
+    
+    <form action="">
+        <div class="reg">
+            <h2>Registration form</h2>
+            <img src="images/username.png" alt="" class="username_img">
+            <input type="text" placeholder="Username" pattern="[a-z]" maxlength="50" required>
+            <img src="images/email.png" alt="" class="email_img">
+            <input type="email" placeholder="Email address" required>
+            <img src="images/pswd.png" alt="" class="pswd_img">
+            <input type="password" placeholder="Password" minlength="8" maxlength="32" required>
+            <input type="password" placeholder="Confirm password" minlength="8" maxlength="32" required>
+        </div>
+
+        <div class="pers">
+            <h2>Personal details</h2>
+            <input type="text" placeholder="First name">
+            <input type="text" placeholder="Last name"><br>
+            <select>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+                <option value="3">Other</option>
+            </select>
+            <input type="date">
+    
+        </div>
+        
+        <div class="agree">
+            <label>
+                <input type="checkbox"><span>I want to receive news and special offers</span>
+            </label>
+            <label>
+                <input type="checkbox"><span>I agree with the Terms and Conditions</span>
+            </label>
+        </div>
+
+        <hr>
+
+        <div class="submit">
+            <input type="button" value="SUBMIT">
+        </div>
+
+    </form>
+
+</body>
+</html>

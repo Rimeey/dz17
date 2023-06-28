@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+}
+
+h2 {
+    margin: 20px 0;
+}
+
+form {
+    box-shadow: 0 0 5px;
+    margin: 10px auto;
+    background-color: #fff;
+    width: 90%;
+    max-width: 900px;
+    padding: 20px 30px;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 1fr 0.1fr 0.1fr;
+    gap: 20px;
+
+}
+input, select {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    height: 40px;
+    margin: 10px;
+    padding-left: 10px;
+}
+
+.reg [placeholder="Username"],
+.reg [placeholder="Email address"],
+.reg [placeholder="Password"] {
+    margin-left: 60px;
+}
+
+.reg,
+.pers input, select {
+    width: 90%;
+}
+
+.pers [placeholder="Last name"],
+.submit {
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+.submit,
+[placeholder="Password"],
+[placeholder="Confirm password"] {
+    grid-row-start: 4;
+    grid-row-end: 4;
+}
+.pers [placeholder="First name"],
+.reg [placeholder="Password"],
+.reg [placeholder="Email address"],
+.reg [placeholder="Username"] {
+    grid-column-start: 1;
+}
+
+.reg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+.reg [placeholder="Username"] {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+.reg [placeholder="Email address"] {
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+[placeholder="Password"] {
+    grid-column-end: 2;
+}
+.pers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+}
+.pers [placeholder="First name"] {
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+.pers [placeholder="Last name"] {
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+.username_img,
+.email_img,
+.pswd_img {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+.username_img {
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+.email_img {
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+.pswd_img {
+    grid-row-start: 4;
+    grid-row-end: 4;
+}
+
+.submit {
+    text-align: right;
+}
+
+.agree label {
+    display:flex;
+    align-items: center;
+    margin: -10px 0px -30px -10px;
+}
+
+hr {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(204, 204, 204);
+    margin: 50px -30px;
+}
+
+[type="button"] {
+    width: 12em;
+    height: 3em;
+    border-radius: 3px;
+    color: #fff;
+    background-color: rgb(13, 165, 165);
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width:950px) {
+    form {
+        display: block;
+    }
+    .pers {
+        width: 92%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    .reg {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    .reg [placeholder="Confirm password"] {
+        grid-row-start: 5;
+        grid-row-end: 5;
+        margin-left: 58px;
+    }
+    .pers {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+    }
+}
